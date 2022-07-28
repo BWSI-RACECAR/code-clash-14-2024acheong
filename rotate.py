@@ -31,12 +31,12 @@ class Solution:
         
         # TODO: Write code below to return a nested list with the solution to the prompt
         to_ret = []
-        i = len(matrix[0])-1
-        while i >= 0:
+        for i in range(len(matrix[0])):
             row = []
-            for j in range(len(matrix[0])):
-                row.append(matrix[i][j])
-            i += 1
+            j = len(matrix[0])-1
+            while (j >= 0):
+                row.append(matrix[j][i])
+                j -= 1
             to_ret.append(row)
         return to_ret
 def main():
